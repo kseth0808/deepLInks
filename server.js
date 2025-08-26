@@ -142,6 +142,7 @@ app.get("/u/:appId", (req, res) => {
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(3000, () => {
-    console.log(`Deep link router listening on 3000`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Deep link router listening on ${PORT}`);
 });
