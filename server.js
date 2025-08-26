@@ -28,10 +28,10 @@ const getApp = (appId) => cfg.apps.find((a) => a.appId === appId);
 
 const buildUniversalUrl = ({ appId, route = "/", params = {} }) => {
     const query = new URLSearchParams({ app: appId, r: route, ...params });
-    return `http://${cfg.domain}/u/${appId}?${query.toString()}`;
+    return `https://${cfg.domain}/u/${appId}?${query.toString()}`;
 };
 
-const buildShortUrl = (id) => `http://${cfg.domain}/s/${id}`;
+const buildShortUrl = (id) => `https://${cfg.domain}/s/${id}`;
 const uaIsMobile = (ua = "") => /iphone|ipad|ipod|android|mobile/i.test(ua);
 
 app.get("/.well-known/apple-app-site-association", (req, res) => {
@@ -137,8 +137,6 @@ app.get("/u/:appId", (req, res) => {
         </html>
     `);
 });
-
-
 
 app.use(express.static(path.join(__dirname, "public")));
 
