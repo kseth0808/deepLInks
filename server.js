@@ -108,7 +108,6 @@ app.get("/u/:appId", (req, res) => {
         fallbackUrl.searchParams.set(k, String(v))
     );
     const isMobile = uaIsMobile(ua);
-    // For local testing: if desktop, open fallback directly
     if (!isMobile) {
         return res.redirect(fallbackUrl.toString());
     }
