@@ -12,8 +12,10 @@
       },
       "android": {
         "package": "com.vpn.androidapp",
-        "sha256CertFingerprints": "3D:99:08:DB:EA:BF:7E:FA:B1:C5:8C:34:39:E3:97:B8:7A:35:7F:65:D9:33:DD:F0:E6:E4:FF:C6:7A:F7:CC:82",
-        "paths": ["/u/voiceToNotes*"]
+        "sha256CertFingerprints": [
+          "3D:99:08:DB:EA:BF:7E:FA:B1:C5:8C:34:39:E3:97:B8:7A:35:7F:65:D9:33:DD:F0:E6:E4:FF:C6:7A:F7:CC:82"
+        ],
+        "paths": ["/u/voiceToNotes/*"]
       },
       "fallbackUrl": "http://voicetonotes.ai/"
     }
